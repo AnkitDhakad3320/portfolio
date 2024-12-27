@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #b89fa4;
+    display: flex;
+}
+
+#part1 {
+    height: 100%;
+    width: 23%;
+}
+
+#part2 {
+    height: 100%;
+    width: 67%;
+    /* background-color: blue; */
+    background-image: url(https://images.unsplash.com/photo-1623199077542-eea6f4e324e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAyfHxtb2RlbHMlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #bc897231;
+}
+
+#part3 {
+    height: 100%;
+    width: 10%;
+}
+
+#text-div {
+    position: absolute;
+    width: 450px;
+    left: 24%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 2s, color white;
+    animation: rap 10s linear infinite reverse;
+}
+
+@keyframes rap {
+    0% {
+        width: 450px;
+    }
+
+    40% {
+        width: 450px;
+    }
+
+    50% {
+        width: 0px;
+    }
+
+    60% {
+        width: 450px;
+    }
+
+    100% {
+        width: 450px;
+    }
+}
+
+.close {
+    width: 100%;
+    height: 23%;
+    margin: 1%;
+    background-color: black;
+}
+
+.closer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    animation: closer 10s linear infinite reverse;
+    animation-delay: 2s;
+}
+
+@keyframes closer {
+    0% {
+        left: 0%;
+    }
+
+    40% {
+        left: 100%;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+#text-div div {
+    display: flex;
+}
+
+.overflow {
+    flex-grow: 1;
+    margin: 1%;
+    background-color: black;
+}
+
+#text-div div h1 {
+    font-size: 85px;
+    letter-spacing: 8px;
+    font-family: monospace;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 68px;
+    color: black;
+    transition: font-size 2s;
+    transition-timing-function: ease-in-out;
+}
+
+#text-div div h1:hover {
+    font-size: 95px;
+}
+
+#small-img-div {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0%, -50%);
+}
+
+#small-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1623198362241-eaf7e6999f75?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    animation: smells 5s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes smells {
+    0% {
+        transform: translate(-100%, 0%);
+    }
+
+    10% {
+        transform: translate(0%, 0%);
+    }
+
+    70% {
+        transform: translate(0%, 0%);
+
+    }
+
+    80% {
+        transform: translate(-100%, 0%);
+
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+
+    }
+}
+
+#vertical-text {
+    position: absolute;
+    transform-origin: 0% 0%;
+    top: 0%;
+    right: -85%;
+    transform: rotate(90deg);
+    animation: primary 5s infinite 1s;
+}
+
+#vertical-text-1 {
+    position: absolute;
+    transform-origin: 0% 0%;
+    top: -0%;
+    right: -85%;
+    transform: rotate(90deg);
+    animation: secondary 5s infinite 1s;
+}
+
+@keyframes primary {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: -220%;
+    }
+}
+
+@keyframes secondary {
+    0% {
+        top: 220%;
+    }
+
+    100% {
+        top: 0%
+    }
+}
+
+#vertical-text h1 {
+    font-size: 85px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: transparent;
+    letter-spacing: 15px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: gray;
+}
+
+#vertical-text-1 h1 {
+    font-size: 85px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: transparent;
+    letter-spacing: 15px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+#header {
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#header #circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(https://www.chungiyoo.com/img/faces/smile%2001.svg);
+    background-size: cover;
+    background-position: center;
+    animation: rol 5s linear infinite;
+}
+
+#header #circle:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rol {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
